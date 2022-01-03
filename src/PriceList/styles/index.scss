@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+.PriceList {
+  width: 100vw;
+  height: 90vh;
+  background: #fcc7cd;
+  font-family: 'Roboto Condensed', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+
+  &__inner {
+    width: calc(90% - 20%);
+    height: 90%;
+    padding: 0 10%;
+    background: #feeef0;
+    border-radius: 5vw;
+    box-shadow: 1px 1px 9px 0 rgba(34, 60, 80, 0.2);
+  }
+
+  &__title {
+    font-size: 10vw;
+    font-weight: bold;
+    text-align: center;
+    margin: 5vh 0;
+    font-style: italic;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 3vh;
+    transform: translateY(100%);
+    opacity: 0;
+    transition: all.5s ease-in-out;
+
+    &--active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    &__item {
+
+      position: relative;
+      overflow: hidden;
+
+      &__title, &__value {
+        background: #feeef0;
+      }
+      &__title {
+        display: flex;
+        align-items: center;
+        position: relative;
+        z-index: 1;
+        float: left;
+        font-size: 4.5vw;
+      }
+
+      &__value {
+        display: flex;
+        align-items: center;
+        position: relative;
+        float: right;
+        z-index: 1;
+        font-size: 4.5vw;
+      }
+
+      &::before {
+        content: "....................................................................................";
+        position: absolute;
+      }
+
+    }
+  }
+}

@@ -1,24 +1,35 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import PriceList from "./PriceList";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     <PriceList items={[
+         {
+             title: "Снятие, маникюр, покрытие",
+             value: 900
+         },
+         {
+             title: "Маникюр без покрытия",
+             value: 450
+         },
+         {
+             title: "Снятие",
+             value: 150
+         },
+         {
+             title: "Ремонт/донаращивание",
+             value: [50, 100]
+         },
+         {
+             title: "Френч (1 ноготь/все)",
+             value: [40, 300]
+         },
+         {
+             title: "Дизайн 1 ногтя",
+             value: "от 40"
+         },
+     ]} />
     </div>
   );
 }
