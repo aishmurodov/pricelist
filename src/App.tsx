@@ -4,7 +4,7 @@ import PriceList from "./PriceList";
 const Sales = () => (
     <PriceList
         title={"Акции"}
-        num={false}
+        num={true}
         items={[
             {
                 title: "Первое посещение",
